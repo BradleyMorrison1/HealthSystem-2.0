@@ -8,9 +8,9 @@ namespace HealthSystem_2._0
 {
     class Player
     {
-        static int health = 100;
-        static int shield = 100;
-        static int lives = 3;
+        public static int health;
+        public static int shield;
+        public static int lives;
 
         public static void TakeDamage(int damage)
         {

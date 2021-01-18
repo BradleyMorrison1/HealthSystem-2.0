@@ -12,11 +12,14 @@ namespace HealthSystem_2._0
         {
             Console.WriteLine("Health System 2.0 | Bradley Morrison\n\n");
 
-
             Player player = new Player();
 
-            Player.ShowStats();
+            Player.health = 100;
+            Player.shield = 100;
+            Player.lives = 3;
 
+
+            Player.ShowStats();
             Player.TakeDamage(155);
             Player.ShowStats();
             Player.RegenerateShield(66);
