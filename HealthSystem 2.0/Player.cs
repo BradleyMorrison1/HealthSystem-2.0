@@ -8,16 +8,22 @@ namespace HealthSystem_2._0
 {
     class Player
     {
-        public static int health;
-        public static int shield;
-        public static int lives;
+         int health;
+         int shield;
+         int lives;
 
-        public static void TakeDamage(int damage)
+        public Player()
+        {
+            health = 100;
+            shield = 100;
+            lives = 3;
+        }
+
+        public void TakeDamage(int damage)
         {
             Console.WriteLine("\nYou have taken " + damage + " points of damage.\n");
 
-            int healthDamage;
-            healthDamage = damage - shield;
+            int healthDamage = damage - shield;
 
             shield -= damage;
 
@@ -42,7 +48,7 @@ namespace HealthSystem_2._0
             }
         }
 
-        public static void Heal(int hp)
+        public void Heal(int hp)
         {
             if(health < 100)
             {
@@ -52,14 +58,14 @@ namespace HealthSystem_2._0
             if (health > 100) health = 100;
         }
 
-        public static void ShowStats()
+        public void ShowStats()
         {
-            Console.WriteLine("|Shield: " + Player.shield);
-            Console.WriteLine("|Health: " + Player.health);
-            Console.WriteLine("|Lives: " + Player.lives);
+            Console.WriteLine("|Shield: " + shield);
+            Console.WriteLine("|Health: " + health);
+            Console.WriteLine("|Lives: " + lives);
         }
 
-        public static void RegenerateShield(int shieldPoints)
+        public void RegenerateShield(int shieldPoints)
         {
             if (shield < 100)
             {

@@ -11,29 +11,23 @@ namespace HealthSystem_2._0
         static void Main(string[] args)
         {
             Console.WriteLine("Health System 2.0 | Bradley Morrison\n\n");
-
             Player player = new Player();
 
-            Player.health = 100;
-            Player.shield = 100;
-            Player.lives = 3;
-
-
-            Player.ShowStats();
-            Player.TakeDamage(155);
-            Player.ShowStats();
-            Player.RegenerateShield(66);
-            Player.ShowStats();
-            Player.TakeDamage(70);
-            Player.ShowStats();
-            Player.Heal(66);
-            Player.ShowStats();
-            Player.Heal(200);
-            Player.ShowStats();
-            Player.RegenerateShield(200);
-            Player.ShowStats();
-            Player.TakeDamage(1000);
-            Player.ShowStats();
+            player.ShowStats();
+            player.TakeDamage(155);
+            player.ShowStats();
+            player.RegenerateShield(66);
+            player.ShowStats();
+            player.TakeDamage(70);
+            player.ShowStats();
+            player.Heal(66);
+            player.ShowStats();
+            player.Heal(200);
+            player.ShowStats();
+            player.RegenerateShield(200);
+            player.ShowStats();
+            player.TakeDamage(1000);
+            player.ShowStats();
 
             Console.ReadKey(true);
         }
